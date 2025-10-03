@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:background="@color/backGround">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Database Hunter"
+        android:textSize="38dp"
+        android:letterSpacing="-0.2"
+        android:fontFamily="serif-monospace"
+        android:textFontWeight="800"
+        android:textStyle="italic"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="40dp"
+        android:layout_gravity="center"
+        android:textColor="@color/foreGround"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_gravity="center"
+        android:layout_height="80dp"
+        android:layout_marginHorizontal="10dp">
+
+        <Button
+            android:id="@+id/insertOpt"
+            android:layout_margin="5dp"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            app:cornerRadius="10dp"
+            android:text="Insert"
+            android:padding="5dp"
+            android:textSize="16dp"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:textFontWeight="800"
+            android:backgroundTint="@color/foreGround"
+            android:textColor="@color/backGround"
+            />
+        <Button
+            android:id="@+id/updateOpt"
+            android:layout_margin="5dp"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            app:cornerRadius="10dp"
+            android:padding="5dp"
+            android:textSize="16dp"
+            android:text="Update"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:textFontWeight="800"
+            android:backgroundTint="@color/foreGround"
+            android:textColor="@color/backGround"/>
+        <Button
+            android:id="@+id/deleteOpt"
+            android:layout_margin="5dp"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            app:cornerRadius="10dp"
+            android:text="Delete"
+            android:padding="5dp"
+            android:textSize="16dp"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:textFontWeight="800"
+            android:backgroundTint="@color/foreGround"
+            android:textColor="@color/backGround"/>
+        <Button
+            android:id="@+id/viewOpt"
+            android:layout_margin="5dp"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            app:cornerRadius="10dp"
+            android:text="View"
+            android:padding="5dp"
+            android:textSize="16dp"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:textFontWeight="800"
+            android:backgroundTint="@color/foreGround"
+            android:textColor="@color/backGround"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/insertSelected"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="30dp"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:visibility="gone">
+
+        <EditText
+            android:id="@+id/insertName"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_weight="1"
+            android:ems="10"
+            android:layout_margin="20dp"
+            android:inputType="text"
+            android:hint="Enter Your Name"
+            android:textColor="@color/foreGround"
+            android:textColorHint="@color/foreGround"/>
+
+        <EditText
+            android:id="@+id/insertAge"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_weight="1"
+            android:ems="10"
+            android:layout_margin="20dp"
+            android:inputType="number"
+            android:hint="Enter Your Age"
+            android:textColor="@color/foreGround"
+            android:textColorHint="@color/foreGround" />
+
+        <EditText
+            android:id="@+id/insertBranch"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_weight="1"
+            android:ems="10"
+            android:layout_margin="20dp"
+            android:inputType="text"
+            android:hint="Enter Your Branch"
+            android:textColor="@color/foreGround"
+            android:textColorHint="@color/foreGround" />
+
+
+        <TextView
+            android:id="@+id/insertMSG"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:textSize="14dp"
+            android:fontFamily="sans-serif-condensed"
+            android:textFontWeight="600"
+            android:textColor="@color/foreGround"
+            />
+
+        <Button
+            android:id="@+id/insertBtn"
+            android:layout_marginTop="50dp"
+            android:layout_width="240dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            app:cornerRadius="10dp"
+            android:layout_gravity="center"
+            android:text="Insert Data"
+            android:padding="5dp"
+            android:textSize="20dp"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:textFontWeight="800"
+            android:backgroundTint="@color/foreGround"
+            android:textColor="@color/backGround"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/updateSelected"
+        android:layout_width="match_parent"
+        android:layout_height="480dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="30dp"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:visibility="gone">
+
+        <EditText
+            android:id="@+id/updateId"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_weight="1"
+            android:ems="10"
+            android:layout_margin="20dp"
+            android:inputType="number"
+            android:hint="Enter Your ID"
+            android:textColor="@color/foreGround"
+            android:textColorHint="@color/foreGround"/>
+
+        <EditText
+            android:id="@+id/updateName"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_weight="1"
+            android:ems="10"
+            android:layout_margin="20dp"
+            android:inputType="text"
+            android:hint="Enter Updated Name"
+            android:textColor="@color/foreGround"
+            android:textColorHint="@color/foreGround"/>
+
+        <EditText
+            android:id="@+id/updateAge"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_weight="1"
+            android:ems="10"
+            android:layout_margin="20dp"
+            android:inputType="number"
+            android:hint="Enter Updated Age"
+            android:textColor="@color/foreGround"
+            android:textColorHint="@color/foreGround" />
+
+        <EditText
+            android:id="@+id/updateBranch"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_weight="1"
+            android:ems="10"
+            android:layout_margin="20dp"
+            android:inputType="text"
+            android:hint="Enter Updated Branch"
+            android:textColor="@color/foreGround"
+            android:textColorHint="@color/foreGround" />
+
+
+        <TextView
+            android:id="@+id/updateMSG"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:textSize="14dp"
+            android:fontFamily="sans-serif-condensed"
+            android:textFontWeight="600"
+            android:textColor="@color/foreGround"
+             />
+
+        <Button
+            android:id="@+id/updateBtn"
+            android:layout_marginTop="50dp"
+            android:layout_width="240dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            app:cornerRadius="10dp"
+            android:layout_gravity="center"
+            android:text="Update Data"
+            android:padding="5dp"
+            android:textSize="20dp"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:textFontWeight="800"
+            android:backgroundTint="@color/foreGround"
+            android:textColor="@color/backGround"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/deleteSelected"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="30dp"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:visibility="gone">
+
+        <EditText
+            android:id="@+id/deleteId"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_weight="1"
+            android:ems="10"
+            android:layout_margin="20dp"
+            android:inputType="number"
+            android:hint="Enter Your ID"
+            android:textColor="@color/foreGround"
+            android:textColorHint="@color/foreGround" />
+
+
+        <TextView
+            android:id="@+id/deleteMSG"
+            android:layout_marginTop="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:textSize="14dp"
+            android:fontFamily="sans-serif-condensed"
+            android:textFontWeight="600"
+            android:textColor="@color/foreGround"
+            />
+
+        <Button
+            android:id="@+id/deleteBtn"
+            android:layout_marginTop="30dp"
+            android:layout_width="240dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            app:cornerRadius="10dp"
+            android:layout_gravity="center"
+            android:text="Delete Data"
+            android:padding="5dp"
+            android:textSize="20dp"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:textFontWeight="800"
+            android:backgroundTint="@color/foreGround"
+            android:textColor="@color/backGround"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/viewSelected"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="30dp"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:visibility="gone">
+
+        <EditText
+            android:id="@+id/viewId"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_weight="1"
+            android:ems="10"
+            android:layout_margin="20dp"
+            android:inputType="number"
+            android:hint="Enter Your ID"
+            android:textColor="@color/foreGround"
+            android:textColorHint="@color/foreGround"
+            />
+
+
+        <TextView
+            android:id="@+id/viewMSG"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:textSize="14dp"
+            android:fontFamily="sans-serif-condensed"
+            android:textFontWeight="600"
+            android:textColor="@color/foreGround"
+             />
+
+        <Button
+            android:id="@+id/viewBtn"
+            android:layout_marginTop="30dp"
+            android:layout_width="240dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            app:cornerRadius="10dp"
+            android:layout_gravity="center"
+            android:text="View Data"
+            android:padding="5dp"
+            android:textSize="20dp"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:textFontWeight="800"
+            android:backgroundTint="@color/foreGround"
+            android:textColor="@color/backGround"/>
+
+    </LinearLayout>
+
+</LinearLayout>
